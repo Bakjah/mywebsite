@@ -1,7 +1,4 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   font-size: 50px;
 }
@@ -38,6 +35,59 @@
   align-items: center;
   justify-content: center;
 }
+
+.scroll-reveal {
+  margin: 20px 0;
+}
+
+.scroll-reveal-text {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.word {
+  display: inline-block;
+}
+
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  transition: opacity 1s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.main-content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: black;
+  overflow: hidden;
+}
+
+.light-rays-container,
+.custom-rays {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 @keyframes fadeIn {
   to {
