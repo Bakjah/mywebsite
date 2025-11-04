@@ -63,16 +63,38 @@ function App() {
               lineHeight: '1.8',
             }}
           >
-            <ScrollReveal
+            <div className="Header">
+              <BlurText
+              text="Moch Bagja Fadillah"
+              delay={150}
+              animateBy="letters"
+              direction="top"
+              onAnimationComplete={handleAnimationComplete}
+              className="blur-text"
+              />
+            </div>
+            <div className="Content1">
+              <ScrollReveal
               baseOpacity={0}
               enableBlur={true}
-              baseRotation={5}
+              baseRotation={0}
               blurStrength={10}
-            >
+              >
               When does a man die? When he is hit by a bullet? No! When he suffers a
               disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!
-            </ScrollReveal>
+              dies when he is forgotten!When does a man die? When he is hit by a bullet? No! When he suffers a
+              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
+              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
+              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
+              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
+              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
+              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
+              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
+              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
+              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
+              dies when he is forgotten!   
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       )}

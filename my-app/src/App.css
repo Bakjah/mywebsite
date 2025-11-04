@@ -1,15 +1,19 @@
+/* Root text */
 #root {
   text-align: center;
   font-size: 50px;
+  background: black;
+  color: white;
 }
 
+/* 🔹 Welcome Screen (animasi awal) */
 .welcome-screen {
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111;
+  background: #000000;
   color: white;
   z-index: 9998;
   opacity: 1;
@@ -18,24 +22,44 @@
 
 .welcome-screen.fade-out {
   opacity: 0;
+  pointer-events: none;
 }
 
+/* 🔹 BlurText animasi */
 .blur-text {
   font-size: clamp(2rem, 6vw, 5rem);
   font-weight: bold;
   text-align: center;
 }
 
+/* 🔹 LightRays background */
+.light-rays-container,
+.custom-rays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* 🔹 Konten utama */
 .main-content {
-  animation: fadeIn 1.5s ease forwards;
-  opacity: 0;
-  min-height: 100vh;
+  width: 100%;
+  /* min-height: 200vh; ⬅️ pastiin bisa discroll */
+  position: relative;
+  background: transparent; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
 }
 
+/* 🔹 Scroll Reveal */
 .scroll-reveal {
   margin: 20px 0;
 }
@@ -50,58 +74,39 @@
   display: inline-block;
 }
 
-.light-rays-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  pointer-events: none;
-  z-index: 3;
-  overflow: hidden;
-}
-
-.welcome-screen {
+.Header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  transition: opacity 1s ease-out;
-}
-
-.fade-out {
-  opacity: 0;
-}
-
-.main-content {
+  align-items: center;  
+  justify-content: center; 
+  text-align: center;
   width: 100%;
-  height: 100vh;
-  position: relative;
-  background: black;
-  overflow: hidden;
+  height: 10cm;
 }
 
-.light-rays-container,
-.custom-rays {
-  width: 100%;
-  height: 100%;
+/* 🧊 Hilangkan scrollbar tapi tetap bisa scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 
-
+/* 🔹 Animasi masuk */
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
 
-
+/* 🔹 Responsive font size */
 @media (max-width: 1024px) {
   .blur-text {
     font-size: 40px;
   }
 }
-
 
 @media (max-width: 768px) {
   .blur-text {
