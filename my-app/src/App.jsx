@@ -3,6 +3,8 @@ import './App.css';
 import BlurText from './BlurText';
 import ScrollReveal from './ScrollReveal';
 import LightRays from './LightRays';
+import ProfileCard from './ProfileCard'
+import avatarImg from './assets/png/IMG_3846-removebg-preview.png';
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -51,49 +53,68 @@ function App() {
             />
           </div>
 
-          {/* Main Content Text */}
-          <div
-            style={{
-              position: 'relative',
-              zIndex: 1,
-              color: 'white',
-              textAlign: 'center',
-              padding: '100px 20px',
-              fontSize: '1.5rem',
-              lineHeight: '1.8',
-            }}
-          >
-            <div className="Header">
-              <BlurText
-              text="Moch Bagja Fadillah"
-              delay={150}
-              animateBy="letters"
-              direction="top"
-              onAnimationComplete={handleAnimationComplete}
-              className="blur-text"
-              />
+          {/* Topbar Glassmorphism */}
+          <div className="topbar">
+            <div className="topbar-left">
+              <span>🌐</span>
+              <span>My Website</span>
             </div>
-            <div className="Content1">
-              <ScrollReveal
-              baseOpacity={0}
-              enableBlur={true}
-              baseRotation={0}
-              blurStrength={10}
-              >
-              When does a man die? When he is hit by a bullet? No! When he suffers a
-              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!When does a man die? When he is hit by a bullet? No! When he suffers a
-              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
-              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
-              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
-              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!   When does a man die? When he is hit by a bullet? No! When he suffers a
-              disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
-              dies when he is forgotten!   
-              </ScrollReveal>
+            <div className="topbar-right">
+              <span>🔔</span>
+              <span>⚙️</span>
+            </div>
+          </div>
+          <div className="left">
+            {/* Main Content Text */}
+            <div
+              style={{
+                position: 'relative',
+                zIndex: 1,
+                color: 'white',
+                textAlign: 'center',
+                padding: '100px 20px',
+                fontSize: '1.5rem',
+                lineHeight: '1.8',
+              }}
+            >
+              <div className="Header">
+                <BlurText
+                  text="Moch Bagja Fadillah"
+                  delay={150}
+                  animateBy="letters"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="blur-text"
+                />
+              </div>
+              <div className="Content1">
+                <ScrollReveal
+                  baseOpacity={0}
+                  enableBlur={true}
+                  baseRotation={0}
+                  blurStrength={10}
+                >
+                  When does a man die? When he is hit by a bullet? No! When he suffers a
+                  disease? No! When he ate a soup made out of a poisonous mushroom? No! A man
+                  dies when he is forgotten! (Repeated content...)
+                </ScrollReveal>
+              </div>
+            </div>
+          </div>
+          <div className="right">
+            <div className="mycardid">
+              <ProfileCard
+              name="Moch Bagja Fadillah"
+              title="Student of Telkom University"
+              handle="mochbagja_fad"
+              status="Busy"
+              contactText="Contact Me"
+              avatarUrl={avatarImg}  
+              showUserInfo={true}
+              enableTilt={true}
+              enableMobileTilt={false}
+              onContactClick={() => console.log('Contact clicked')}
+              />
             </div>
           </div>
         </div>
