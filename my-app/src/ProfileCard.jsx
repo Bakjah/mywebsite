@@ -24,7 +24,7 @@ const adjust = (value, fromMin, fromMax, toMin, toMax) =>
 const easeInOutCubic = x => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 
 const ProfileCardComponent = ({
-  avatarUrl = '<Placeholder for avatar URL>',
+  avatarUrl = './assets/png/IMG_3846-removebg-preview.png',
   iconUrl = '<Placeholder for icon URL>',
   grainUrl = '<Placeholder for grain URL>',
   behindGradient,
@@ -35,10 +35,10 @@ const ProfileCardComponent = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = 'Javi A. Torres',
-  title = 'Software Engineer',
-  handle = 'javicodes',
-  status = 'Online',
+  name = '',
+  title = '',
+  handle = '',
+  status = '',
   contactText = 'Contact',
   showUserInfo = true,
   onContactClick

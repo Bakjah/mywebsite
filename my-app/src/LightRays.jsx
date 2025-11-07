@@ -11,25 +11,28 @@ const hexToRgb = hex => {
 
 const getAnchorAndDir = (origin, w, h) => {
   const outside = 0.2;
+  const lessOutside = outside * 0.5; // 👉 supaya kanan tidak terlalu jauh
+
   switch (origin) {
     case 'top-left':
       return { anchor: [0, -outside * h], dir: [0, 1] };
     case 'top-right':
-      return { anchor: [w, -outside * h], dir: [0, 1] };
+      return { anchor: [w - 0.24 * w, -outside * h], dir: [0, 1] }; 
     case 'left':
       return { anchor: [-outside * w, 0.5 * h], dir: [1, 0] };
     case 'right':
-      return { anchor: [(1 + outside) * w, 0.5 * h], dir: [-1, 0] };
+      return { anchor: [(1 + lessOutside) * w, 0.5 * h], dir: [-1, 0] }; // 🔹 lebih dekat
     case 'bottom-left':
       return { anchor: [0, (1 + outside) * h], dir: [0, -1] };
     case 'bottom-center':
       return { anchor: [0.5 * w, (1 + outside) * h], dir: [0, -1] };
     case 'bottom-right':
-      return { anchor: [w, (1 + outside) * h], dir: [0, -1] };
+      return { anchor: [w - lessOutside * w, (1 + outside) * h], dir: [0, -1] }; // 🔹 lebih dekat ke tengah
     default: // "top-center"
       return { anchor: [0.5 * w, -outside * h], dir: [0, 1] };
   }
 };
+
 
 const LightRays = ({
   raysOrigin = 'top-center',

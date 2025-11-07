@@ -374,11 +374,11 @@
 .pc-details {
   width: 100%;
   position: absolute;
-  top: 1em; /* sebelumnya 3em, dikurangi agar lebih ke atas */
+  top: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center; /* pastikan teks di tengah */
-  gap: 0.2em; /* jarak antar teks */
+  align-items: center; 
+  gap: 0.2em;
 }
 .pc-details h3 {
   font-weight: 600;
@@ -444,11 +444,12 @@
   }
 
   .pc-details h3 {
-    font-size: min(4svh, 2.5em);
+      font-size: 19px;
+      margin-top: -1.5cm;
   }
 
   .pc-details p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .pc-user-info {
@@ -492,11 +493,11 @@
   }
 
   .pc-details h3 {
-    font-size: min(3.5svh, 2em);
+    font-size: 15px;
   }
 
   .pc-details p {
-    font-size: 12px;
+    font-size: 10px;
     top: -8px;
   }
 
