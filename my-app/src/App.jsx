@@ -41,7 +41,7 @@ function App() {
   const handleAnimationComplete = () => {
     console.log('Welcome animation done!');
     setTimeout(() => setFadeOut(true), 1500);
-    setTimeout(() => setShowWelcome(false), 2500);
+    setTimeout(() => setShowWelcome(false), 3500);
   };
 
   return (
@@ -114,7 +114,8 @@ function App() {
                   showUserInfo={true}
                   enableTilt={true}
                   enableMobileTilt={false}
-                  onContactClick={() => console.log('Contact clicked')}
+                  onContactClick={() => window.open('https://www.instagram.com/mochbagja_fad/', '_blank')}
+
                 />
               </div>
             </div>

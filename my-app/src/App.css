@@ -189,20 +189,6 @@ body {
   }
 }
 
-/* Awalnya, elemen "Under Construction" disembunyikan */
-#under-construction {
-  display: none;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 100px 20px;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  color: white;               /* pastikan teksnya kelihatan */
-  background: #000;
-}
-
 /* ==== RESPONSIVE ==== */
 @media (max-width: 958px) {
   /* Sembunyikan semua anak di dalam #root kecuali #under-construction */
@@ -214,5 +200,3 @@ body {
     display: flex !important;
   }
 }
-
-
