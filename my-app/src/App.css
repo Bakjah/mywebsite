@@ -1,6 +1,6 @@
 /* ==== GLOBAL ==== */
+
 body {
-  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -22,11 +22,6 @@ body {
   text-align: center;
   font-size: 50px;
   transform: translateY(-5%);
-}
-
-* {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar {
@@ -194,66 +189,30 @@ body {
   }
 }
 
+/* Awalnya, elemen "Under Construction" disembunyikan */
+#under-construction {
+  display: none;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 100px 20px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: white;               /* pastikan teksnya kelihatan */
+  background: #000;
+}
+
 /* ==== RESPONSIVE ==== */
-@media (max-width: 1024px) {
-  .Header h1 {
-    font-size: 50px;
-    margin-top: 60px;
+@media (max-width: 958px) {
+  /* Sembunyikan semua anak di dalam #root kecuali #under-construction */
+  #root > *:not(#under-construction) {
+    display: none !important;
   }
 
-  .Content1 p {
-    font-size: 24px;
-  }
-
-  .top-section {
-    gap: 50px;
+  #under-construction {
+    display: flex !important;
   }
 }
 
-@media (max-width: 768px) {
-  .top-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-    align-items: center;
-  }
 
-  .left, .right {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    align-items: center;
-  }
-
-  .Header h1 {
-    font-size: 40px;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .Content1 p {
-    font-size: 20px;
-    margin: 20px 0 0 0;
-    text-align: center;
-  }
-
-  .mycardid {
-    padding-top: 3cm;
-  }
-
-  .centerDiv {
-    margin-top: 60px;
-    transform: none;
-    left: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .Header h1 {
-    font-size: 30px;
-  }
-
-  .Content1 p {
-    font-size: 18px;
-  }
-}

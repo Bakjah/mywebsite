@@ -17,7 +17,7 @@ const getAnchorAndDir = (origin, w, h) => {
     case 'top-left':
       return { anchor: [0, -outside * h], dir: [0, 1] };
     case 'top-right':
-      return { anchor: [w - 0.24 * w, -outside * h], dir: [0, 1] }; 
+      return { anchor: [w - 0.3 * w, -outside * h], dir: [0, 1] }; 
     case 'left':
       return { anchor: [-outside * w, 0.5 * h], dir: [1, 0] };
     case 'right':
